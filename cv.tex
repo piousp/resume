@@ -1,95 +1,54 @@
-\documentclass[a4paper,10pt]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
-\usepackage{geometry}
-\usepackage{enumitem}
-\usepackage{hyperref}
-\usepackage{xcolor}
+\documentclass[a4paper,12pt]{article}
 
-% Configuración de márgenes
-\geometry{top=1in, bottom=1in, left=1in, right=1in}
+% Cargar paquetes esenciales
+\usepackage{fontspec}         % Soporte para fuentes modernas y Unicode
+\usepackage{polyglossia}      % Manejo de múltiples idiomas
 
-% Configuración de hipervínculos
-\hypersetup{
-	colorlinks=true,
-	linkcolor=black,
-	urlcolor=blue
-}
+% Configuración de idiomas
+\setdefaultlanguage{spanish}  % Idioma principal
+\setotherlanguages{english, japanese}
 
-% Definición de encabezado
-\newcommand{\header}[1]{
-	\par{\centering\huge\textbf{#1}\par}
-	\vspace{5pt}
-}
+% Configuración de fuentes
+\setmainfont{Noto Serif CJK JP}      % Fuente principal (compatible con varios idiomas)
+\setsansfont{Noto Sans  CJK JP}       % Fuente sans-serif
+\setmonofont{Noto Sans Mono}  % Fuente monoespaciada
 
-% Definición de secciones
-\newcommand{\sectiontitle}[1]{
-	\vspace{10pt}
-	{\large\textbf{#1}}
-	\vspace{5pt}
-	\hrule
-	\vspace{5pt}
-}
+% Margen simple
+\usepackage[margin=0.5in]{geometry}
 
 \begin{document}
-	
-	% Encabezado
-	\header{Pablo Peraza vargas}
-	
-	\centering
-	\textbf{Correo:} \href{mailto:peraza.pablo@gmail.com}{peraza.pablo@gmail.com} \quad
-	\textbf{Teléfono:} +506 7275 9916\quad
-	\textbf{Ubicación:} San José, Costa Rica\\
-	\textbf{LinkedIn:} \href{https://linkedin.com/in/pabloperaza}{linkedin.com/in/pabloperaza} \quad
-	\textbf{GitHub:} \href{https://github.com/piousp}{github.com/piousp} 
-	\par
-	\vspace{10pt}
-	
-	% Resumen Profesional
-	\sectiontitle{Resumen Profesional}
-	Profesional con más de 15 de experiencia en desarrollo de software, apasionado por la tecnología y buenas prácticas. Mis habilidades clave incluyen metodologías ágiles, backend y frontend, programación funcional, NoSQL , AWS y Linux. Experiencia en diversas "Fintech" e industrias.
-	
-	% Experiencia Profesional
-	\sectiontitle{Experiencia Profesional}
-	\textbf{Paidy} \hfill 2020-02 -- actualidad \\
-	\emph{Desarrollador en Scala} \\
-	\begin{itemize}[leftmargin=*]
-		\item Logro destacado o responsabilidad clave 1.
-		\item Logro destacado o responsabilidad clave 2.
-		\item Uso de herramientas/tecnologías específicas para proyectos importantes.
-	\end{itemize}
-	
-	\textbf{Nombre de la Empresa} \hfill [Fecha Inicio] -- [Fecha Fin] \\
-	\emph{Tu Título o Rol} \\
-	\begin{itemize}[leftmargin=*]
-		\item Logro destacado o responsabilidad clave 1.
-		\item Logro destacado o responsabilidad clave 2.
-	\end{itemize}
-	
-	% Educación
-	\sectiontitle{Educación}
-	\textbf{Universidad Latina de Costa Rica} \hfill 2008 -- 2010 \\
-	\emph{Licenciatura en Ingeniería en Sistemas Informáticos} \\
-	5 años de educación superior en total \\
-	
-	\textbf{Universidad Latina de Costa Rica} \hfill 2005 -- 2008 \\
-	\emph{Bachillerato en Ingeniería en Sistemas Informáticos} \\
-	Magna Cum Laude, 3 años de educación superior en total
-	
-	% Habilidades
-	\sectiontitle{Habilidades}
-	\begin{itemize}[leftmargin=*]
-		\item \textbf{Habilidad Técnica:} Breve descripción o lista.
-		\item \textbf{Habilidad Técnica:} Breve descripción o lista.
-		\item \textbf{Idiomas:} Nivel de competencia (ej. Español - Nativo, Inglés - Avanzado).
-	\end{itemize}
-	
-	% Información Adicional (opcional)
-	\sectiontitle{Información Adicional}
-	\begin{itemize}[leftmargin=*]
-		\item M101: MongoDB for Developers - 2013
-		\item Coursera’s Functional Programming Principles in Scala - 2013
-		\item Destacado en "40 menores de 40" del 2014, periódico El Financiero: \href{https://www.elfinancierocr.com/negocios/pablo-peraza-vargas/GXSKE42JTFFPJLVNBXCIRH2QGE/story/}{www.elfinancierocr.com/negocios/pablo-peraza-vargas/GXSKE42JTFFPJLVNBXCIRH2QGE/story/}
-	\end{itemize}
-	
+
+% Encabezado
+\begin{center}
+    {\Large \textbf{Pablo Peraza Vargas}}
+    \par\noindent\rule{\textwidth}{1pt}
+    \vspace{5pt}
+    \textbf{\correo:} \texttt{peraza.pablo@gmail.com} \quad
+    \textbf{\tel:} +506 7275 9916 \\
+    \textbf{LinkedIn:} \texttt{linkedin.com/in/pabloperaza} \quad
+    \textbf{GitHub:} \texttt{github.com/piousp}
+\end{center}
+
+% Idioma español
+\section*{Resumen Profesional (Español)}
+Profesional con experiencia en desarrollo de software. Hablo español, inglés y japonés. Experto en programación funcional y con interés en nuevas tecnologías.
+
+% Idioma inglés
+\section*{Professional Summary (English)}
+Software developer with experience in functional programming. Fluent in Spanish, English, and Japanese. Interested in exploring new technologies.
+
+% Idioma japonés
+\section*{職務経歴書 (Japanese)}
+ソフトウェア開発者としての経験があります。スペイン語、英語、日本語が話せます。関数型プログラミングのエキスパートで、新しい技術に興味があります。
+
+% Sección de experiencia
+\section*{Experiencia / Experience / 職歴}
+\textbf{株式会社 Paidy} \hfill [Fecha Inicio] -- [Fecha Fin] \\
+\emph{Desarrollador de Software / Software Developer} \\
+\begin{itemize}
+    \item Diseño e implementación de sistemas escalables. (Español)
+    \item Designed and implemented scalable systems. (English)
+    \item スケーラブルなシステムの設計と実装を担当。 (Japanese)
+\end{itemize}
+
 \end{document}
