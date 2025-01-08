@@ -1,8 +1,10 @@
-\documentclass[a4paper,12pt]{article}
+\documentclass[a4paper,10pt]{article}
 
 % Cargar paquetes esenciales
+\usepackage[utf8]{inputenc}
 \usepackage{fontspec}         % Soporte para fuentes modernas y Unicode
 \usepackage{polyglossia}      % Manejo de múltiples idiomas
+\usepackage{hyperref}
 
 % Configuración de idiomas
 \setdefaultlanguage{spanish}  % Idioma principal
@@ -23,32 +25,89 @@
     {\Large \textbf{Pablo Peraza Vargas}}
     \par\noindent\rule{\textwidth}{1pt}
     \vspace{5pt}
+    \textbf{San José, Costa Rica} \quad
     \textbf{\correo:} \texttt{peraza.pablo@gmail.com} \quad
     \textbf{\tel:} +506 7275 9916 \\
     \textbf{LinkedIn:} \texttt{linkedin.com/in/pabloperaza} \quad
     \textbf{GitHub:} \texttt{github.com/piousp}
 \end{center}
 
-% Idioma español
-\section*{Resumen Profesional (Español)}
-Profesional con experiencia en desarrollo de software. Hablo español, inglés y japonés. Experto en programación funcional y con interés en nuevas tecnologías.
+\section*{Resumen Profesional}
+Profesional con más de 15 de experiencia en desarrollo de software, 
+apasionado por la tecnología y buenas prácticas. Mis habilidades clave 
+incluyen metodologías ágiles, backend y frontend, programación funcional, NoSQL , 
+AWS, Podman/Docker y Linux. Experiencia en diversas "Fintech" e industrias.
 
-% Idioma inglés
-\section*{Professional Summary (English)}
-Software developer with experience in functional programming. Fluent in Spanish, English, and Japanese. Interested in exploring new technologies.
-
-% Idioma japonés
-\section*{職務経歴書 (Japanese)}
-ソフトウェア開発者としての経験があります。スペイン語、英語、日本語が話せます。関数型プログラミングのエキスパートで、新しい技術に興味があります。
+\subsection*{Resumen de habilidades técnicas}
+\begin{itemize}
+    \item \textbf{BackEnd:} NodeJS, Scala 2 & 3, Java 11+, Rust, Python, Julia, Apache Spark
+    \item \textbf{FrontEnd:} HTML5\&CSS3, Javascript -> [VueJS, AngularJS, jQuery, TypeScript],
+     CSS -> [PostCSS, SASS, LESS], Nativescript (Javascript for native Android and iOS development)
+    \item \textbf{Databases:} MongoDB, Cassandra, PostgreSQL, Firebase, MySQL, ElasticSearch
+    \item \textbf{Build tools:} NPM, Webpack, SBT, Gulp, Grunt, Maven, Gradle
+    \item \textbf{Environments:} AWS -> [S3, EC2, Route53, Lambda, EMR], CircleCI, Docker/Podman
+    \item \textbf{Others:} Functional Programming, Responsive Design, TDD, 
+    Twitter Bootstrap and Material Design, Agile Principle, Git, 
+    Linux, Bash, Genetic Algorithms, Neural Networks, CI/CD, Microservices
+\end{itemize}
 
 % Sección de experiencia
-\section*{Experiencia / Experience / 職歴}
-\textbf{株式会社 Paidy} \hfill [Fecha Inicio] -- [Fecha Fin] \\
-\emph{Desarrollador de Software / Software Developer} \\
+\section*{Experiencia}
+\subsection*{株式会社 Paidy}
+\textbf{2020 -- Actualidad} \hfill  Tokio, Japón \\
+\emph{Desarrollador de Software Senior en Scala}
 \begin{itemize}
-    \item Diseño e implementación de sistemas escalables. (Español)
-    \item Designed and implemented scalable systems. (English)
-    \item スケーラブルなシステムの設計と実装を担当。 (Japanese)
+    \item Desarrollar nuevas características para el sistema de pagos de la aplicación.
+    \item Desarrollar componentes de integración en Rust
+\end{itemize}
+
+\subsection*{Gorilla Logic}
+\textbf{2016 -- 2020} \hfill  Costa Rica \\
+\emph{Desarrollador de Software Senior en Scala y Java}
+\begin{itemize}
+    \item Desarrollar nuevas características para el sistema de pagos de la aplicación.
+    \item Lógica de inversiones en el lenguaje Julia
+\end{itemize}
+
+\subsection*{Ciris Informatic Solutions}
+\textbf{2011 -- 2016} \hfill  Costa Rica \\
+\emph{Dueño, Director Ejecutivo, Desarrollador / Arquitecto / DevOps  }
+\begin{itemize}
+    \item Desarrollar nuevas características para el sistema de pagos de la aplicación.
+    \item Lógica de inversiones en el lenguaje Julia
+\end{itemize}
+
+\subsection*{Global Business Systems}
+\textbf{2008 -- 2011} \hfill  Costa Rica \\
+\emph{Desarrollador de Software en Java  }
+\begin{itemize}
+    \item Desarrollar nuevas características para el sistema de pagos de la aplicación.
+    \item Lógica de inversiones en el lenguaje Julia
+\end{itemize}
+
+\section*{Educación}
+\subsection*{Universidad Latina de Costa Rica}
+\textbf{2008 -- 2010} \hfill  Costa Rica \\
+\emph{Licenciatura en Ingeniería en Sistemas Informáticos}
+\begin{itemize}
+    \item Desarrollar nuevas características para el sistema de pagos de la aplicación.
+    \item Lógica de inversiones en el lenguaje Julia
+\end{itemize}
+
+\subsection*{Universidad Latina de Costa Rica}
+\textbf{2005 -- 2008} \hfill  Costa Rica \\
+\emph{Bachillerator en Ingeniería en Sistemas Informáticos}
+\begin{itemize}
+    \item Desarrollar nuevas características para el sistema de pagos de la aplicación.
+    \item Lógica de inversiones en el lenguaje Julia
+\end{itemize}
+
+\section*{Desarrollo Profesional}
+\begin{itemize}
+    \item M101: MongoDB for Developers - 2013
+    \item Coursera’s Functional Programming Principles in Scala - 2013
+    \item Reseña en ``40 menores de 40'' del periódico El Financiero: 
+    \url{http://www.elfinancierocr.com/negocios/40_menores_de_40-emprendedurismo-Pablo_Peraza_Vargas_0_629337067.html}
 \end{itemize}
 
 \end{document}
