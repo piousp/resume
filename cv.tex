@@ -5,6 +5,9 @@
 \usepackage{fontspec}         % Soporte para fuentes modernas y Unicode
 \usepackage{polyglossia}      % Manejo de múltiples idiomas
 \usepackage{hyperref}
+\usepackage{xcolor}           % Para colores
+\usepackage{enumitem}         % Para personalizar listas
+\usepackage{parskip}          % Para mejorar el espaciado entre párrafos
 
 % Configuración de idiomas
 \setdefaultlanguage{spanish}  % Idioma principal
@@ -12,30 +15,44 @@
 
 % Configuración de fuentes
 \setmainfont{Noto Sans CJK JP}      % Fuente principal (compatible con varios idiomas)
-\setsansfont{Noto Sans  CJK JP}       % Fuente sans-serif
+\setsansfont{Noto Sans CJK JP}       % Fuente sans-serif
 \setmonofont{Noto Sans Mono}  % Fuente monoespaciada
 
 % Margen simple
 \usepackage[margin=0.5in]{geometry}
 
+% Colores personalizados
+\definecolor{primary}{RGB}{0, 51, 102}
+\definecolor{secondary}{RGB}{102, 102, 102}
+
+% Estilo de los enlaces
+\hypersetup{
+    colorlinks=true,
+    linkcolor=primary,
+    urlcolor=primary,
+}
+
+% Estilo de las listas
+\setlist[itemize]{leftmargin=*, nosep}
+
 \begin{document}
 
 % Encabezado
 \begin{center}
-    {\Huge \textbf{Pablo Peraza Vargas}}
+    {\Huge \textbf{\textcolor{primary}{Pablo Peraza Vargas}}}
     \par\noindent\rule{\textwidth}{1pt}
     \vspace{5pt}
-    \textbf{San José, Costa Rica} \quad
-    \textbf{\correo:} \texttt{pablo.peraza@proton.me} \quad
-    \textbf{\tel:} \texttt{+506 7275 9916} \\
-    \textbf{LinkedIn:} \texttt{linkedin.com/in/pabloperaza} \quad
-    \textbf{GitHub:} \texttt{github.com/piousp}
+    \textbf{\textcolor{secondary}{San José, Costa Rica}} \quad
+    \textbf{\textcolor{secondary}{\correo:}} \texttt{pablo.peraza@proton.me} \quad
+    \textbf{\textcolor{secondary}{\tel:}} \texttt{+506 7275 9916} \\
+    \textbf{\textcolor{secondary}{LinkedIn:}} \texttt{linkedin.com/in/pabloperaza} \quad
+    \textbf{\textcolor{secondary}{GitHub:}} \texttt{github.com/piousp}
 \end{center}
 
-\section*{\resumen}
+\section*{\textcolor{primary}{\resumen}}
 \resumenTexto
 
-\subsection*{\techSkills}
+\subsection*{\textcolor{primary}{\techSkills}}
 \begin{itemize}
     \item \textbf{BackEnd:} NodeJS, Scala 2 \& 3, Java 11+, Rust, Python, Julia, Apache Spark
     \item \textbf{FrontEnd:} HTML5\&CSS3, Javascript -> [VueJS, AngularJS, jQuery, TypeScript],
@@ -50,7 +67,7 @@
 \end{itemize}
 
 % Sección de experiencia
-\section*{\exp}
+\section*{\textcolor{primary}{\exp}}
 \subsection*{株式会社 Paidy}
 \textbf{2020 -- 2025} \hfill  \japan \\
 \emph{\softDevSeniorScala}
@@ -71,7 +88,7 @@
 \emph{\gbsysTitle}
 \gbsysText
 
-\section*{\educacion}
+\section*{\textcolor{primary}{\educacion}}
 \subsection*{Universidad Latina de Costa Rica}
 \textbf{2008 -- 2010} \hfill  Costa Rica \\
 \emph{\licenciaturaTitle}
@@ -82,7 +99,7 @@
 \emph{\bachilleratorTitle}
 \bachilleratorText
 
-\section*{\desarrolloProfesional}
+\section*{\textcolor{primary}{\desarrolloProfesional}}
 \begin{itemize}
     \item M101: MongoDB for Developers - 2013
     \item Coursera’s Functional Programming Principles in Scala - 2013
