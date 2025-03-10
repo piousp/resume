@@ -1,0 +1,76 @@
+\documentclass[10.5pt]{letter}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{fontspec}         % Soporte para fuentes modernas y Unicode
+\usepackage{polyglossia}      % Manejo de múltiples idiomas
+\usepackage{parskip}          % Para mejorar el espaciado entre párrafos
+
+% Configuración de idiomas
+\setdefaultlanguage{english}  % Idioma principal
+\setotherlanguages{japanese}
+
+% Configuración de fuentes
+\setmainfont{Noto Serif CJK JP}      % Fuente principal (compatible con varios idiomas)
+\setsansfont{Noto Sans CJK JP}       % Fuente sans-serif
+\setmonofont{Noto Sans Mono}  % Fuente monoespaciada
+
+% Page margins
+\geometry{a4paper, left=2cm, right=2cm, top=1cm, bottom=1cm}
+
+% Sender information
+\address{
+    Pablo Peraza Vargas \\ 
+    San José, Costa Rica \\
+    pablo.peraza@proton.me
+}
+
+% Date
+\date{\today}
+
+% Definir el nombre de la empresa
+\newcommand{\companyName}{McMahon Publishing Group}
+
+
+\onehalfspacing
+
+\begin{document}
+
+\begin{letter}{
+    \companyName
+}
+
+% Salutation
+\opening{}
+
+% Body of the letter
+\par
+Thank you for taking the time to review my application. I am a Costa Rican software developer with over 15 years of experience in diverse areas of software development, including working for U.S.-based companies, leading my own software development boutique, and gaining international experience in Japan.
+
+\par
+I began my career in 2009 as a Java developer for a national company specializing in custom software for the government. During my three years there, I introduced modern practices such as version control (Subversion), agile methodologies, and new frameworks, significantly improving the team's efficiency and technical capabilities. This experience also allowed me to explore functional programming, particularly Scala, which became a cornerstone of my career.
+
+\par
+In 2011, I founded my own software development boutique, where I led a team of 4-5 developers, serving as Scrum Master, administrator and salesman. We delivered custom web applications for clients, including U.S.-based companies, which provided me with invaluable experience in remote collaboration and exporting services internationally. My efforts to promote innovation and entrepreneurship were recognized in 2014 by a national business newspaper.
+
+\par
+In 2016, I joined Gorilla Logic as a Scala developer working for different U.S clients and industries. This role not only deepened my expertise in functional programming but also allowed me to contribute to Gorilla Logic's growth by expanding the contracts with the clients.
+
+\par
+In 2020, I relocated to Japan to work at 株式会社 Paidy as a software developer, where I gained further international experience and honed my skills in cross-cultural collaboration and global project management. After five enriching years, I returned to Costa Rica in 2025, bringing with me a broader perspective and a renewed passion for tackling complex challenges in software development.
+
+\par
+Throughout my career, I have consistently sought to deliver high-quality software that brings tangible value to clients while fostering collaborative and innovative work environments. I am now eager to bring this experience to \companyName{} and contribute to your team's success.
+
+\par
+Thank you for considering my application. I would welcome the opportunity to discuss how my skills and experiences align with your needs. I look forward to the possibility of contributing to \companyName{}'s mission.
+
+% Closing
+\closing{Sincerely, \\ Pablo Peraza Vargas}
+
+% Enclosures (optional)
+%\encl{Resume \\ Letters of Recommendation}
+
+\end{letter}
+
+\end{document}
