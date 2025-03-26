@@ -1,116 +1,123 @@
-\documentclass[a4paper,10pt]{article}
+\documentclass[10pt,a4paper,sans]{moderncv}
 
-% Cargar paquetes esenciales
-\usepackage[utf8]{inputenc}
-\usepackage{fontspec}         % Soporte para fuentes modernas y Unicode
-\usepackage{polyglossia}      % Manejo de múltiples idiomas
-\usepackage{hyperref}
-\usepackage{xcolor}           % Para colores
-\usepackage{enumitem}         % Para personalizar listas
-\usepackage{parskip}          % Para mejorar el espaciado entre párrafos
+% Configuración ATS-friendly
+\usepackage[utf8]{inputenc} % Essential for ATS parsing
+\usepackage[T1]{fontenc}    % Better character support
+\usepackage[sfdefault]{noto} % Simple, clean font
+\usepackage{roboto}         % Fallback font
+\usepackage{fontspec}       % Unicode support
+\renewcommand{\familydefault}{\sfdefault}
 
-% Configuración de idiomas
-\setdefaultlanguage{spanish}  % Idioma principal
-\setotherlanguages{english, japanese}
+% Configuración de fuentes japonesas
+\newfontfamily\japanesefont{Noto Sans CJK JP}[Scale=0.9]
 
-% Configuración de fuentes
-\setmainfont{Noto Sans CJK JP}      % Fuente principal (compatible con varios idiomas)
-\setsansfont{Noto Sans CJK JP}       % Fuente sans-serif
-\setmonofont{Noto Sans Mono}  % Fuente monoespaciada
+% Ajuste de posición del título
+\makeatletter
+\renewcommand{\maketitle}{%
+  \name{\@firstname}{\@lastname}%
+  \title{\@title}%
+  \parbox[t]{\hintscolumnwidth}{\raggedleft\hintfont{\color{addresscolor}\@title}}%
+  \par\vspace{10pt}}
+\makeatother
 
-% Margen simple
-\usepackage[margin=0.5in]{geometry}
+% Estilo minimalista para ATS
+\moderncvstyle{classic}
+\moderncvcolor{black}
+\setlength{\hintscolumnwidth}{3.2cm}
+\usepackage[scale=0.85,a4paper]{geometry}
 
-% Colores personalizados
-\definecolor{primary}{RGB}{0, 51, 102}
-\definecolor{secondary}{RGB}{102, 102, 102}
-
-% Estilo de los enlaces
+% Optimización de metadatos para ATS
+\usepackage[unicode,pdfencoding=auto]{hyperref}
 \hypersetup{
-    colorlinks=true,
-    linkcolor=primary,
-    urlcolor=primary,
+    pdftitle={Pablo Peraza Vargas - Senior Software Engineer resume},
+    pdfauthor={Pablo Peraza Vargas},
+    pdfsubject={Software Engineering Resume},
+    pdfkeywords={Scala, Java, NodeJS, Functional Programming, Distributed Systems, Linux, Remote }
 }
 
-% Estilo de las listas
-\setlist[itemize]{leftmargin=*, nosep}
+% Información personal
+\name{Pablo}{Peraza Vargas}
+\title{Senior Software Engineer}
+\address{San José, Costa Rica}
+\phone[mobile]{+506 7275 9916}
+\email{pablo.peraza@proton.me}
+\social[linkedin]{pabloperaza}
+\social[github]{piousp}
 
 \begin{document}
+\makecvtitle
+%\vspace{-15pt} % Ajuste de espacio post-título
 
-% Encabezado
-\begin{center}
-    {\Huge \textbf{\textcolor{primary}{Pablo Peraza Vargas}}}
-    \par\noindent\rule{\textwidth}{1pt}
-    \vspace{5pt}
-    \textbf{\textcolor{secondary}{San José, Costa Rica}} \quad
-    \textbf{\textcolor{secondary}{\correo:}} \texttt{pablo.peraza@proton.me} \quad
-    \textbf{\textcolor{secondary}{\tel:}} \texttt{+506 7275 9916} \\
-    \textbf{\textcolor{secondary}{LinkedIn:}} \texttt{linkedin.com/in/pabloperaza} \quad
-    \textbf{\textcolor{secondary}{GitHub:}} \texttt{github.com/piousp}
-\end{center}
+% Sección de resumen
+\section{Professional Summary}
+\cvitem{}{
+  Seasoned Software Engineer with \textbf{15+ years} of experience specializing in \textbf{distributed systems} and \textbf{functional programming}. Proven expertise in:
+  \begin{itemize}
+    \item \textbf{Backend Architecture}: Scala, Java, Node.js
+    \item \textbf{Leadership}: Managed technical teams and delivered consumer-facing products
+    \item \textbf{Global Collaboration}: Extensive experience in multicultural environments (Japan, US, LATAM) and remote work coordination across timezones.
+    \item \textbf{System Design}: RESTful API, microservices, event-driven architectures, and high-throughput systems
+  \end{itemize}
+}
 
-\section*{\textcolor{primary}{\resumen}}
-\resumenTexto
+% Habilidades técnicas
+\section{Technical Skills}
+\cvitem{\textit{Programming}}{Scala , Java, JavaScript, TypeScript, Python, Rust, Julia}
+\cvitem{\textit{Platforms}}{Java Virtual Machine (JVM), NodeJS, Linux}
+\cvitem{\textit{Data}}{Kafka, Spark}
+\cvitem{\textit{Frontend}}{Vue.js, AngularJS, NativeScript, PostCSS/SASS}
+\cvitem{\textit{Cloud/DevOps}}{AWS (Lambda/EMR/S3), Docker/Podman, Terraform, CircleCI}
+\cvitem{\textit{Databases}}{MongoDB, Cassandra, PostgreSQL, Elasticsearch}
+\cvitem{\textit{Methodologies}}{Functional Programming, TDD, Microservices, RESTful API, GraphQL, Asynchronous architecture}
+\cvitem{\textit{Languages}}{Spanish (Native), English (Business), Japanese (Beginner)}
 
-\subsection*{\textcolor{primary}{\techSkills}}
+% Experiencia laboral
+\section{Professional Experience}
+\cventry{2020--2025}{Senior Scala Developer}{\japanesefont \textbf{\textit{株式会社Paidy}}}{Tokyo, Japan}{}{
 \begin{itemize}
-    \item \textbf{BackEnd:} NodeJS, Scala 2 \& 3, Java 11+, Rust, Python, Julia, Apache Spark
-    \item \textbf{FrontEnd:} HTML5\&CSS3, Javascript -> [VueJS, AngularJS, jQuery, TypeScript],
-     CSS -> [PostCSS, SASS, LESS], Nativescript (Javascript for native Android and iOS development)
-    \item \textbf{\databases:} MongoDB, Cassandra, PostgreSQL, Firebase, MySQL, ElasticSearch
-    \item \textbf{\buildtools:} NPM, Webpack, SBT, Gulp, Grunt, Maven, Gradle
-    \item \textbf{\env:} AWS -> [S3, EC2, Route53, Lambda, EMR], CircleCI, Docker/Podman
-    \item \textbf{\lenguage:} \lengText
-    \item \textbf{\other:} Functional Programming, Responsive Design, TDD, 
-    Twitter Bootstrap and Material Design, Agile Principle, Git, 
-    Linux, Bash, Genetic Algorithms, Neural Networks, CI/CD, Microservices
-\end{itemize}
+  \item Credits company, similar to credit cards. Worked in the settlements team.
+  \item Designed and implemented payment system features including {\japanesefont コンビニ} (convenience store) integrations
+  \item Developed Rust-based services for SMBC {\japanesefont 銀行} integration enabling automatic monthly debits
+  \item Led migration to event-driven architecture using Kafka, improving throughput by 40\%
+  \item Tech Stack: Scala (Cats Effect, Http4s), Kafka, Cassandra, Rust, PostgreSQL, AWS Lambda
+\end{itemize}}
 
-% Sección de experiencia
-\section*{\textcolor{primary}{\exp}}
-\subsection*{株式会社 Paidy}
-\textbf{2020 -- 2025} \\ 
-\textcolor{secondary}{\japan} \\
-\emph{\softDevSeniorScala}
-\paidyText
-
-\subsection*{Gorilla Logic}
-\textbf{2016 -- 2020} \\
-\textcolor{secondary}{Costa Rica} \\
-\emph{\gorillaTitle}
-\gorillaText
-
-\subsection*{Ciris Informatic Solutions}
-\textbf{2011 -- 2016} \\
-\textcolor{secondary}{Costa Rica} \\
-\emph{\cirisTitle}
-\cirisText
-
-\subsection*{Global Business Systems}
-\textbf{2008 -- 2011} \\
-\textcolor{secondary}{Costa Rica} \\
-\emph{\gbsysTitle}
-\gbsysText
-
-\section*{\textcolor{primary}{\educacion}}
-\subsection*{Universidad Latina de Costa Rica}
-\textbf{2008 -- 2010} \\
-\textcolor{secondary}{Costa Rica} \\
-\emph{\licenciaturaTitle}
-\licenciaturaText
-
-\subsection*{Universidad Latina de Costa Rica}
-\textbf{2005 -- 2008} \\
-\textcolor{secondary}{Costa Rica} \\
-\emph{\bachilleratorTitle}
-\bachilleratorText
-
-\section*{\textcolor{primary}{\desarrolloProfesional}}
+\cventry{2016--2020}{Senior Software Engineer}{\textbf{Gorilla Logic}}{Costa Rica}{}{
 \begin{itemize}
-    \item M101: MongoDB for Developers - 2013
-    \item Coursera’s Functional Programming Principles in Scala - 2013
-    \item \elfinanciero
-    \url{http://www.elfinancierocr.com/negocios/40_menores_de_40-emprendedurismo-Pablo_Peraza_Vargas_0_629337067.html}
-\end{itemize}
+  \item IT Consulting and Outsourcing company. Worked for different US-based clients.
+  \item Built financial analytics tools using Java and Julia for quantitative investment strategies
+  \item Developed real-time incident management systems with Angular and Scala microservices
+  \item Implemented CI/CD pipelines reducing deployment times from 2 hours to 15 minutes
+  \item Tech Stack: Scala, Java, Julia
+\end{itemize}}
 
+\cventry{2011--2016}{Founder \& CTO}{\textbf{Ciris Informatic Solutions}}{Costa Rica}{}{
+\begin{itemize}
+  \item Own IT Consulting company. Made custom software for different Costarican-based clients for vastly different industries.
+  \item Established and scaled tech consultancy to 10+ employees serving international clients
+  \item Architected Node.js-based SaaS solutions with AWS infrastructure
+  \item Implemented DevOps practices cutting operational costs by 35\%
+  \item Tech Stack: NodeJS (ExpressJS), AngularJS, VueJS, Python (Flask), Scala (Play, Akka), MongoDB
+\end{itemize}}
+
+\cventry{2008--2011}{Java Developer}{\textbf{Global Business Systems}}{Costa Rica}{}{
+\begin{itemize}
+  \item IT Consulting and Outsourcing company. Worked for Costarican goverment institutions.
+  \item Developed electronic voting system using Java for University of Costa Rica handling 50k+ transactions
+  \item Designed procurement management system still in use after 10+ years
+  \item Tech Stack: Java (JSP, JSF, Hybernate), Oracle
+\end{itemize}}
+\pagebreak
+% Educación
+\section{Education}
+\cventry{2008--2010}{B.Sc. Computer Software Engineering}{Universidad Latina}{Costa Rica}{}{}
+\cventry{2005--2008}{Associate's Degree in Software Engineering}{Universidad Latina}{Costa Rica}{\textit{Magna Cum Laude}}{}
+
+\section{Certificates}
+\cvitem{2013}{Functional Programming Principles in Scala - Coursera}
+\cvitem{2013}{M101: MongoDB for Developers Certification}
+
+% Logros adicionales
+\section{Achievements}
+\cvitem{2014}{Featured in "40 Under 40" by Costarican newspaper "El Financiero" \url{http://www.elfinancierocr.com/negocios/40_menores_de_40-emprendedurismo-Pablo_Peraza_Vargas_0_629337067.html}}
 \end{document}
