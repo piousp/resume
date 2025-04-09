@@ -29,15 +29,15 @@
 % Optimización de metadatos para ATS
 \usepackage[unicode,pdfencoding=auto]{hyperref}
 \hypersetup{
-    pdftitle={Pablo Peraza Vargas - Senior Software Engineer resume},
+    pdftitle={Pablo Peraza Vargas - Senior Software Engineer \& Engineer Leader resume},
     pdfauthor={Pablo Peraza Vargas},
     pdfsubject={Software Engineering Resume},
-    pdfkeywords={Scala, Java, NodeJS, Functional Programming, Distributed Systems, Linux, Remote }
+    pdfkeywords={Scala, Java, NodeJS, Functional Programming, Distributed Systems, Linux, Remote, team leadership, technical roadmap, hiring processes}
 }
 
 % Información personal
 \name{Pablo}{Peraza Vargas}
-\title{Senior Software Engineer}
+\title{Senior Software Engineer \& Engineer Leader}
 \address{San José, Costa Rica}
 \phone[mobile]{+506 7275 9916}
 \email{pablo.peraza@proton.me}
@@ -46,74 +46,110 @@
 
 \begin{document}
 \makecvtitle
-%\vspace{-15pt} % Ajuste de espacio post-título
 
 % Sección de resumen
 \section{Professional Summary}
 \cvitem{}{
-  Seasoned Software Engineer with \textbf{15+ years} of experience specializing in \textbf{distributed systems} and \textbf{functional programming}. Proven expertise in:
+  Engineering Leader and Senior Software Engineer with 15+ years of experience, blending \textbf{technical depth} (Scala, distributed systems, Node.js) with proven leadership in building high-performing teams. Expertise in
   \begin{itemize}
-    \item \textbf{Backend Architecture}: Scala, Java, Node.js
-    \item \textbf{Leadership}: Managed technical teams and delivered consumer-facing products
-    \item \textbf{Global Collaboration}: Extensive experience in multicultural environments (Japan, US, LATAM) and remote work coordination across timezones.
-    \item \textbf{System Design}: RESTful API, microservices, event-driven architectures, and high-throughput systems
+    \item \textbf{Backend Architecture:} Scala, Java, Node.js
+    \item \textbf{Leadership:} Managed teams of 10+ engineers (Ciris) and led cross-functional projects (Paidy).
+    \item \textbf{Delivery Focus:} Shipped products used by millions (Paidy payments, financial analytics tools).
+    \item \textbf{Global Collaboration:} Extensive experience in multicultural environments (Japan, US, LATAM) and remote work coordination across time zones
+    \item \textbf{System Design:} RESTful APIs, microservices, event-driven architectures, and high-throughput systems
+    \item \textbf{Process Improvement:} Introduced Scrum, TDD, and FP best practices across organizations.
   \end{itemize}
 }
 
 % Habilidades técnicas
 \section{Technical Skills}
-\cvitem{\textit{Programming}}{Scala , Java, JavaScript, TypeScript, Python, Rust, Julia}
-\cvitem{\textit{Platforms}}{Java Virtual Machine (JVM), NodeJS, Linux}
-\cvitem{\textit{Data}}{Kafka, Spark}
+\cvitem{\textit{Programming}}{Scala, Java, JavaScript, TypeScript, Python, Rust, Julia}
+\cvitem{\textit{Platforms}}{Java Virtual Machine (JVM), Node.js, Linux}
+\cvitem{\textit{Data}}{Kafka, Spark, Parquet}
 \cvitem{\textit{Frontend}}{Vue.js, AngularJS, NativeScript, PostCSS/SASS}
 \cvitem{\textit{Cloud/DevOps}}{AWS (Lambda/EMR/S3), Docker/Podman, Terraform, CircleCI}
 \cvitem{\textit{Databases}}{MongoDB, Cassandra, PostgreSQL, Elasticsearch}
-\cvitem{\textit{Methodologies}}{Functional Programming, TDD, Microservices, RESTful API, GraphQL, Asynchronous architecture}
+\cvitem{\textit{Methodologies}}{Functional Programming, TDD, Microservices, RESTful APIs, GraphQL, Asynchronous architectures}
+\cvitem{\textit{Management}}{Agile (XP, Scrum, Kanban), JIRA, Basecamp, Trello}
 \cvitem{\textit{Languages}}{Spanish (Native), English (Business), Japanese (Beginner)}
+\cvitem{\textit{Others}}{Bash, Latex, PostMan, Datadog, Confluence, Swagger}
+
+%\section{Leadership \& Management}
+%\cvitem{\textit{Team Leadership}}{Mentored 10+ engineers, conducted performance reviews, and built hiring processes.}
+%\cvitem{\textit{Project Management}}{Led cross-functional projects from specs to delivery.}
+%\cvitem{\textit{Process Improvement}}{Introduced Scrum, TDD, and FP practices at several companies.}
+%\cvitem{\textit{Stakeholder Management}}{Translated business requirements into technical roadmaps for executives.}
 
 % Experiencia laboral
 \section{Professional Experience}
-\cventry{2020--2025}{Senior Scala Developer}{\japanesefont \textbf{\textit{株式会社Paidy}}}{Tokyo, Japan}{}{
+\cventry{2020--2025}{Senior Scala Developer, Team Lead}{\japanesefont \textbf{\textit{株式会社Paidy}}}{Tokyo, Japan}{}{
+  \textbf{Tech Stack:} Scala (Cats Effect, Http4s), Kafka, Cassandra, Rust, PostgreSQL, AWS (ECS, EMR, S3, CloudWatch, Param Store, Lambda), Datadog, CircleCI, Terraform\\
+  \textit{Main Tasks and Responsibilities}
 \begin{itemize}
-  \item Credits company, similar to credit cards. Worked in the settlements team.
-  \item Designed and implemented payment system features including {\japanesefont コンビニ} (convenience store) integrations
+  \item It's a credits company (similar to credit cards). Worked in the settlements team.
+  \item Led a 5-engineer team for a project related to payment integration with {\japanesefont コンビニ} (convenience stores)
   \item Developed Rust-based services for SMBC {\japanesefont 銀行} integration enabling automatic monthly debits
-  \item Tech Stack: Scala (Cats Effect, Http4s), Kafka, Cassandra, Rust, PostgreSQL, AWS Lambda
-\end{itemize}}
+  \item Coordinated with QA on test case coverage
+  \item Acted as interim Engineering Lead during transitions (covered sprints, backlog grooming, and stakeholder updates)
+  \item Assisted Product Managers by translating requirements into tasks with estimates and budgets
+  \item Mentored new team members (juniors and seniors) either on tech stack or business rules.
+  \item Led documentation efforts and task automation for the team
+  \item Implemented dashboards, KPIs, and SLO metrics for several services
+  \item Created a 2-stage interview process for the team, with standardized rubrics and quantitative scoring
+  \item \textbf{Major Accomplishment:} Reduced technical debt in error handling, increasing overall system stability and performance
+\end{itemize}
+}
 
 \cventry{2016--2020}{Senior Software Engineer}{\textbf{Gorilla Logic}}{Costa Rica}{}{
+  \textbf{Tech Stack:} Scala (Akka, Play), MongoDB, Java (Hibernate), Julia, MS SQL Server\\
+  \textit{Main Tasks and Responsibilities}
 \begin{itemize}
-  \item IT Consulting and Outsourcing company. Worked for different US-based clients.
+  \item IT consulting and outsourcing company working with various US-based clients
   \item Built financial analytics tools using Java and Julia for quantitative investment strategies
+  \item Introduced and taught Test-Driven Development to Western Asset (Gorilla Logic client)
+  \item Introduced and taught functional programming concepts to both Gorilla Logic and Western Asset teams
+  \item Served as the first ``outsourced'' resource for VictorOps (Gorilla Logic client), leading the effort to expand the team and contract
   \item Developed real-time incident management systems with Angular and Scala microservices
-  \item Tech Stack: Scala, Java, Julia
+  \item \textbf{Major Accomplishment:} Helped expand the team working for VictorOps
 \end{itemize}}
 
 \cventry{2011--2016}{Founder \& CTO}{\textbf{Ciris Informatic Solutions}}{Costa Rica}{}{
+  \textbf{Tech Stack:} Node.js (Express), AngularJS, Vue.js, Python (Flask), Scala (Play, Akka), MongoDB\\
+  \textit{Main Tasks and Responsibilities}
 \begin{itemize}
-  \item Own IT Consulting company. Made custom software for different Costarican-based clients for vastly different industries.
-  \item Established and scaled tech consultancy to 10+ employees serving multiple clients
-  \item Architected Node.js-based SaaS solutions with AWS infrastructure
-  \item Tech Stack: NodeJS (ExpressJS), AngularJS, VueJS, Python (Flask), Scala (Play, Akka), MongoDB
+  \item Founded and managed an IT consulting company developing custom software for various clients across different industries
+  \item Built the company's hiring framework from scratch; trained interviewers to evaluate candidates using calibration exercises
+  \item Full people-management responsibilities: Performance reviews, career growth plans, and conflict resolution
+  \item Assisted clients with server configuration using Linode and AWS
+  \item Architected Node.js-based SaaS solutions with AWS infrastructure (S3)
+  \item Used Scala and Akka to create a search engine for a client with hundreds of millions of records
+  \item Defined coding standards for all projects, conducted code reviews and quality checks
+  \item Mentor and train new engineers to help them quickly adapt and become productive as fast as possible
+  \item Communicated directly with clients, demonstrating work progress and negotiating terms
+  \item \textbf{Major Accomplishment:} Secured international clients for the company
 \end{itemize}}
 
 \cventry{2008--2011}{Java Developer}{\textbf{Global Business Systems}}{Costa Rica}{}{
+  \textbf{Tech Stack:} Java (JSP, JSF, Hibernate), Oracle\\
+  \textit{Main Tasks and Responsibilities}
 \begin{itemize}
-  \item IT Consulting and Outsourcing company. Worked for Costarican goverment institutions.
+  \item IT consulting and outsourcing company working with Costa Rican government institutions
   \item Developed electronic voting system using Java for University of Costa Rica
-  \item Tech Stack: Java (JSP, JSF, Hybernate), Oracle
+  \item Led and implemented SVN (version control) company-wide
+  \item Spearheaded adoption of Scrum methodology for projects
+  \item \textbf{Major Accomplishment:} Create a Java Applet that read an X509 certificate from the USB ports
 \end{itemize}}
-\pagebreak
+
 % Educación
 \section{Education}
 \cventry{2008--2010}{B.Sc. Computer Software Engineering}{Universidad Latina}{Costa Rica}{}{}
 \cventry{2005--2008}{Associate's Degree in Software Engineering}{Universidad Latina}{Costa Rica}{\textit{Magna Cum Laude}}{}
 
-\section{Certificates}
+\section{Certifications}
 \cvitem{2013}{Functional Programming Principles in Scala - Coursera}
 \cvitem{2013}{M101: MongoDB for Developers Certification}
 
 % Logros adicionales
 \section{Achievements}
-\cvitem{2014}{Featured in ``40 Under 40'' by Costarican newspaper ``El Financiero'' \url{http://www.elfinancierocr.com/negocios/40_menores_de_40-emprendedurismo-Pablo_Peraza_Vargas_0_629337067.html}}
+\cvitem{2014}{Featured in ``40 Under 40'' by Costa Rican newspaper ``El Financiero'' \url{http://www.elfinancierocr.com/negocios/40_menores_de_40-emprendedurismo-Pablo_Peraza_Vargas_0_629337067.html}}
 \end{document}
